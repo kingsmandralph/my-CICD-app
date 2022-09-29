@@ -24,7 +24,7 @@ pipeline{
 		script{                   
                     withAWS(credentials: '318867684519', region: 'eu-west-2') {
                         sh '''echo "Downloading jar from s3 for deployment to ${ENV}" '''
-                        s3Download bucket: 'document-ekene', file: 'myproject.jar', path: 'ci-demo/javaapp/myapp.jar'
+                        s3Download bucket: 'document-ekene'
                     }
 		 }
              }
