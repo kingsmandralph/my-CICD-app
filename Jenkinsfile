@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    parameters {
+	  choice choices: ['UAT', 'PERFORMACE', 'PROD'], description: 'Target environment', name: 'TARGET_ENV'
+    }
 	tools {
         maven 'cba-maven-3.6.3'
         jdk 'cba-jdk8'
